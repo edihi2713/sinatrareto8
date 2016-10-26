@@ -1,12 +1,6 @@
 require "sinatra"
-require "rack/user_agent"
 
-configure do
-  use Rack::UserAgent
-end
 
 get '/' do
-
-   request.browser   
-
+   request.user_agent   
 end
